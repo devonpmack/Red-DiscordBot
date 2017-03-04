@@ -132,8 +132,8 @@ class Champgg:
         # Your code will go here
         await self.bot.say("BANG BANG! Yung " + ctx.message.author.mention + " just pulled up on " + user.mention + " ! :open_mouth: :open_mouth: :gun: :gun:")
 
-def special_match(strg, search=re.compile(r'[^\. a-z0-9A-Z]').search):
-    return not bool(search(strg))
+    def special_match(strg, search=re.compile(r'[^\. a-z0-9A-Z]').search):
+        return not bool(search(strg))
 def setup(bot):
     if soupAvailable:
         bot.add_cog(Champgg(bot))
