@@ -17,7 +17,7 @@ class Memes:
     async def meme(self, ctx):
         """Send a meme"""
         if ctx.invoked_subcommand is None:
-            await self.bot.say(random.choice(self.links))
+            await self.bot.say(random.choice(self.memes))
     @meme.command()
     async def add(self, toAdd):
         """Add a hockeylover meme"""

@@ -18,7 +18,7 @@ class Champgg:
         self.valid = "^[0123456789p{L} _.]+$abcdefghijklmnopqrstuvwxyz"
         self.apikey = "b096f8311a7c35406547e0b38363f0ee"
         self.rapikey = "RGAPI-e807e69e-4f64-455c-9654-49caca7e2b08"
-        self.people = {'memes': 'jhin','minseong': 'ahri','james': 'caitlyn','david': 'darius', 'jp': 'yorick', 'mark': 'nidalee','frank': 'ekko','corey': 'khazix', 'amit': 'zed', 'kevin': 'akali', 'devon': 'shaco', 'vinh': 'riven', 'andrew':'katarina', 'nigger': 'urgot', 'leo': 'yasuo', 'bill': 'janna', 'jihad':'ziggs'}
+        self.people = {'justin': 'jhin','minseong': 'ahri','james': 'caitlyn','david': 'darius', 'jp': 'yorick', 'mark': 'nidalee','frank': 'ekko','corey': 'khazix', 'amit': 'zed', 'kevin': 'akali', 'devon': 'shaco', 'vinh': 'riven', 'andrew':'katarina', 'nigger': 'urgot', 'leo': 'yasuo', 'bill': 'janna', 'jihad':'ziggs'}
 
     @commands.command()
     async def winrate(self,*,name):
