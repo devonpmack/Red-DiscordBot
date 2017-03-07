@@ -1,3 +1,4 @@
+#USE wget https://raw.githubusercontent.com/devonpmack/Red-DiscordBot/develop/Dockerfile -P ./Discord to download
 FROM ubuntu
 ENTRYPOINT ["/Red-DiscordBot/setup.sh"]
 #Install Prerequisites
