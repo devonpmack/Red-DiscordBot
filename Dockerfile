@@ -19,3 +19,4 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.5 get-pip.py
 RUN git clone -b develop --single-branch https://github.com/devonpmack/Red-DiscordBot.git Red-DiscordBot
 RUN python3 /Red-DiscordBot/launcher.py --update-reqs-no-audio
+RUN chmod 755 /Red-DiscordBot/setup.sh
