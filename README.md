@@ -1,5 +1,18 @@
-
 ![intro](http://i.imgur.com/RgGlNpQ.jpg)
+# Devon-Bot Installation
+[Install Docker](https://docs.docker.com/engine/getstarted/linux_install_help/)
+
+Download the Docker file in order to build the bot
+
+` wget https://raw.githubusercontent.com/devonpmack/Red-DiscordBot/develop/Dockerfile -P ./bot`
+
+Build the Docker
+
+` docker build -t discordbot ./bot`
+
+This is how you should run the bot each time. It will mount your data and will be stored on the host machine at $HOME/data.
+
+` docker run -itv $HOME/data:/Red-DiscordBot/data discordbot /bin/bash`
 
 # Red - A fully customizable Discord bot
 #### *Music, admin, trivia, fun commands and much more!*
