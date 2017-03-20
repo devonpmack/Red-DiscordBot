@@ -9,7 +9,7 @@ Build the Docker
 
 ` docker build -t discordbot ./bot`
 
-This is how you should run the bot each time. It will mount your data and will be stored on the host machine at $HOME/data.
+This is how you should run the bot each time. It will mount your data and will be stored on the host machine at $HOME/data. Adding -g to the end will make it pull from the github if it's cached an older version.
 
 ` docker run -itv $HOME/data:/Red-DiscordBot/data discordbot /bin/bash`
 
