@@ -1,7 +1,7 @@
 # Devon-Bot Installation
 [Install Docker](https://docs.docker.com/engine/getstarted/linux_install_help/)
 
-Download the Docker file in order to build the bot
+Download the Dockerfile in order to build the bot
 
 ` wget https://raw.githubusercontent.com/devonpmack/Red-DiscordBot/develop/Dockerfile -P ./bot`
 
