@@ -20,7 +20,7 @@ class Memes:
             await self.bot.say(random.choice(self.memes))
     @meme.command()
     async def add(self, toAdd):
-        """Add a hockeylover meme"""
+        """Add a meme"""
         f = open('data/memes/memes.txt', 'w')
         self.memes.append(toAdd)
         for item in self.memes:
@@ -29,7 +29,7 @@ class Memes:
         f.close()
     @meme.command()
     async def remove(self, toRemove):
-        """Remove a hockeylover meme"""
+        """Remove a meme"""
         f = open('data/memes/memes.txt', 'w')
         try:
             self.memes.remove(toRemove)
