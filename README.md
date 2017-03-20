@@ -1,6 +1,18 @@
+# Devon-Bot Installation
+[Install Docker](https://docs.docker.com/engine/getstarted/linux_install_help/)
 
+This is how you should run the bot each time. It will mount your data and will be stored on the host machine at $HOME/data. Adding -g to the end will make it pull from the github if it's cached an older version.
+
+` docker run -itv $HOME/data:/Red-DiscordBot/data devonpmack/discordbot`
+
+In order to leave the bot always on, you must run it in detached mode. First, after running the bot normally and doing the first time setup, press CTRL-C to exit the bot. Next run the bot again with this command:
+
+`docker run -itv $HOME/data:/Red-DiscordBot/data -d devonpmack/discordbot`
+
+The bot should now be running in the background.
+
+***
 ![intro](http://i.imgur.com/RgGlNpQ.jpg)
-
 # Red - A fully customizable Discord bot
 #### *Music, admin, trivia, fun commands and much more!*
 [<img src="https://img.shields.io/badge/Support-me!-orange.svg">](https://www.patreon.com/Twentysix26)  [<img src="https://img.shields.io/badge/discord-py-blue.svg">](https://github.com/Rapptz/discord.py) [<img src="https://discordapp.com/api/guilds/133049272517001216/widget.png?style=shield">](https://discord.gg/red) [![Build Status](https://travis-ci.org/Twentysix26/Red-DiscordBot.svg?branch=develop)](https://travis-ci.org/Twentysix26/Red-DiscordBot)
