@@ -1,5 +1,6 @@
 import discord
 import random
+import praw
 from discord.ext import commands
 
 class Memes:
@@ -12,6 +13,36 @@ class Memes:
         with open('data/memes/memes.txt') as f2:
             self.memes = f2.read().splitlines()
         f2.close()
+    @commands.command()
+    async def angery(self):
+        """ANGERY!!!!"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/175379883172691968/293511301752160256/71b.png")
+
+    @commands.command()
+    async def dank(self):
+        """Get a random r/dankmemes post"""
+        r = praw.Reddit(client_id='r_c8xhZFOC1kyQ',client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ',password='devonbot',user_agent='discordbot',username='devon_bot')
+        sub = r.subreddit('dankmemes')
+        posts = sub.random()
+        await self.bot.say(posts.title)
+        await self.bot.say(posts.url)
+
+    @commands.command()
+    async def diwhy(self):
+        """Get a random r/diWHY post"""
+        r = praw.Reddit(client_id='r_c8xhZFOC1kyQ',client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ',password='devonbot',user_agent='discordbot',username='devon_bot')
+        sub = r.subreddit('diwhy')
+        posts = sub.random()
+        await self.bot.say(posts.title)
+        await self.bot.say(posts.url)
+
+    @commands.command(pass_context=True)
+    async def pullup(self, ctx, user: discord.Member):
+        """PULL UP ON @USER >.<"""
+
+        # Your code will go here
+        await self.bot.say(
+            "BANG BANG! Yung " + ctx.message.author.mention + " just pulled up on " + user.mention + " ! :open_mouth: :open_mouth: :gun: :gun:")
 
     @commands.group(pass_context=True, no_pm=True)
     async def meme(self, ctx):

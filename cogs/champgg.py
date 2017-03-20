@@ -18,7 +18,7 @@ class Champgg:
         self.valid = "^[0123456789p{L} _.]+$abcdefghijklmnopqrstuvwxyz"
         self.apikey = "b096f8311a7c35406547e0b38363f0ee"
         self.rapikey = "RGAPI-e807e69e-4f64-455c-9654-49caca7e2b08"
-        self.people = {'justin': 'jhin','minseong': 'ahri','james': 'caitlyn','david': 'darius', 'jp': 'yorick', 'mark': 'nidalee','frank': 'ekko','corey': 'khazix', 'amit': 'zed', 'kevin': 'akali', 'devon': 'shaco', 'vinh': 'riven', 'andrew':'katarina', 'nigger': 'urgot', 'leo': 'yasuo', 'bill': 'janna', 'jihad':'ziggs'}
+        self.people = {'logan': 'warwick','theo': 'shaco','david': 'int','justin': 'jhin','minseong': 'ahri','james': 'caitlyn','david': 'darius', 'jp': 'yorick', 'mark': 'nidalee','frank': 'ekko','corey': 'khazix', 'amit': 'zed', 'kevin': 'akali', 'devon': 'shaco', 'vinh': 'riven', 'andrew':'katarina', 'nigger': 'urgot', 'leo': 'yasuo', 'bill': 'janna', 'jihad':'ziggs'}
 
     @commands.command()
     async def winrate(self,*,name):
@@ -48,7 +48,7 @@ class Champgg:
                 if winpercent < 45.0:
                     rating = -1
                 else:
-                    rating = 0
+                    rating = int(winpercent)-50
             else:
                 rating = int((winpercent - 50))
 
@@ -124,13 +124,6 @@ class Champgg:
                 return
         else:
             await self.bot.say("Invalid name.")
-
-    @commands.command(pass_context=True)
-    async def pullup(self, ctx, user: discord.Member):
-        """PULL UP ON @USER >.<"""
-
-        # Your code will go here
-        await self.bot.say("BANG BANG! Yung " + ctx.message.author.mention + " just pulled up on " + user.mention + " ! :open_mouth: :open_mouth: :gun: :gun:")
 
     def special_match(strg, search=re.compile(r'[^\. a-z0-9A-Z]').search):
         return not bool(search(strg))
