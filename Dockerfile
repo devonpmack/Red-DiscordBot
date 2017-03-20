@@ -21,3 +21,4 @@ RUN git clone -b develop --single-branch https://github.com/devonpmack/Red-Disco
 RUN python3 /Red-DiscordBot/launcher.py --update-reqs-no-audio
 RUN chmod 755 /Red-DiscordBot/setup.sh
 RUN pip3 install beautifulsoup4
+RUN pip install praw
