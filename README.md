@@ -13,6 +13,7 @@ This is how you should run the bot each time. It will mount your data and will b
 
 ` docker run -itv $HOME/data:/Red-DiscordBot/data discordbot /bin/bash`
 
+***
 ![intro](http://i.imgur.com/RgGlNpQ.jpg)
 # Red - A fully customizable Discord bot
 #### *Music, admin, trivia, fun commands and much more!*
