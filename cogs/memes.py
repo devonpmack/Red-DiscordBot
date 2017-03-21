@@ -23,8 +23,10 @@ class Memes:
     async def gitpull(self):
         """Pulls github changes"""
         bashCommand = "git pull"
+        print("pulling git")
         process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
         output, error = process.communicate()
+
 
     @commands.command()
     async def dank(self):
