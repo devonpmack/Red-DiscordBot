@@ -36,15 +36,16 @@ class champgg2:
         request = requests.get(url)
         data = request.json()
 
-        roleNum = -1
+        try:
 
-        for i in range(0, len(data)):
-            if data[i]['role'].lower() == role:
-                roleNum = i
-                break
+            for i in range(0, len(data)):
+                if data[i]['role'].lower() == role:
+                    roleNum = i
+                    break
 
-        if roleNum < 0:
-            await self.bot.say("Couldn't find that champion/role combination.")
+        except:
+            self.bot.say("Couldn't find that champion/role combination.")
+            raise
 
         await self.bot.say("Build winrate: " + str(data[roleNum]['items']['highestWinPercent']['winPercent']) + "\% over " + str(data[roleNum]['items']['highestWinPercent']['games']) + " games")
 
