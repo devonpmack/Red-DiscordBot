@@ -22,7 +22,7 @@ class Memes:
     @commands.command()
     async def gitpull(self):
         """Pulls github changes"""
-        bashCommand = "git pull"
+        bashCommand = "git -C /Red-DiscordBot pull"
         print("pulling git")
         process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
         output, error = process.communicate()
