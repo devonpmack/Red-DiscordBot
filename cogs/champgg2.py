@@ -14,6 +14,7 @@ class champgg2:
     async def build(self, role, *, champ):
         """Channel your inner Devon and get the highest winrate build"""
         url = "http://api.champion.gg/champion/" + champ + "/?api_key=" + self.apikey
+        items = []
 
         request = requests.get(url)
         data = request.json()
@@ -24,7 +25,7 @@ class champgg2:
                 break
 
         for i in range(0, 5):
-            items[i] = str(data[roleNum]['items']['highestWinPercent']['items'][i]['name'])
+             items.append(str(data[roleNum]['items']['highestWinPercent']['items'][i]['name']))
 
         for i in items:
             say = i + " > "
