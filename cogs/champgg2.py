@@ -11,7 +11,7 @@ class champgg2:
         self.apikey = "b096f8311a7c35406547e0b38363f0ee"
 
     @commands.command()
-    async def build(self, *, champ, role):
+    async def build(self, role, *, champ):
         """Channel your inner Devon and get the highest winrate build"""
         url = "http://api.champion.gg/champion/" + champ + "/?api_key=" + self.apikey
 
