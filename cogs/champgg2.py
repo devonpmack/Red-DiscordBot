@@ -28,7 +28,7 @@ class champgg2:
              items.append(str(data[roleNum]['items']['highestWinPercent']['items'][i]['name']))
 
         for i in items:
-            say = i + " > "
+            say += i + " > "
 
         await self.bot.say(say)
 
