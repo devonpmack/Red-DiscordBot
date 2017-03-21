@@ -15,8 +15,6 @@ import glob
 import os
 import aiohttp
 
-import git
-
 log = logging.getLogger("red.owner")
 
 
