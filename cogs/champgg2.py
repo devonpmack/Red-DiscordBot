@@ -23,6 +23,8 @@ class champgg2:
                 roleNum = i
                 break
 
+        await self.bot.say(roleNum)
+
         for i in range(0, 5):
             items[i] = str(data[roleNum]['items'][i]['name'])
 
