@@ -19,6 +19,7 @@ class Hockeylover:
         if ctx.invoked_subcommand is None:
             await self.bot.say(random.choice(self.links))
             # Your code will go here
+
     @thathockeylover.command()
     async def add(self, toAdd):
         """Add a hockeylover meme"""
