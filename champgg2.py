@@ -36,8 +36,6 @@ class champgg2:
         request = requests.get(url)
         data = request.json()
 
-        roleNum = -1
-
         try:
 
             for i in range(0, len(data)):
@@ -47,7 +45,7 @@ class champgg2:
 
         except:
             self.bot.say("Couldn't find that champion/role combination.")
-            return
+            raise
 
         await self.bot.say("Build winrate: " + str(data[roleNum]['items']['highestWinPercent']['winPercent']) + "\% over " + str(data[roleNum]['items']['highestWinPercent']['games']) + " games")
 
