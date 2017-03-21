@@ -24,7 +24,7 @@ class champgg2:
                 break
 
         for i in range(0, 5):
-            items[i] = str(data[roleNum]['items']['highestWinPercent'][i]['name'])
+            items[i] = str(data[roleNum]['items']['highestWinPercent']['items'][i]['name'])
 
         for i in items:
             say = i + " > "
