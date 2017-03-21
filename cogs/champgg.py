@@ -123,7 +123,4 @@ class Champgg:
     def special_match(strg, search=re.compile(r'[^\. a-z0-9A-Z]').search):
         return not bool(search(strg))
 def setup(bot):
-    if soupAvailable:
-        bot.add_cog(Champgg(bot))
-    else:
-        raise RuntimeError("You need to run `pip3 install beautifulsoup4`")
+    print("Champgg init")
