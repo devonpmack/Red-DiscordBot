@@ -19,9 +19,10 @@ class champgg2:
         data = request.json()
 
         for i in range(0, len(data)):
-            if data[i]['role'] = role:
+            if data[i]['role'] == role:
                 roleNum = i
                 break
+
         for i in range(0, 5):
             items[i] = str(data[roleNum]['items'][i]['name'])
 
@@ -29,3 +30,6 @@ class champgg2:
             say = i + " > "
 
         await self.bot.say(say)
+
+def setup(bot):
+    bot.add_cog(lolwiki(bot))
