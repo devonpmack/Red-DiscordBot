@@ -1,6 +1,7 @@
 import discord
 import random
 import praw
+import subprocess
 from discord.ext import commands
 
 class Memes:
@@ -17,6 +18,13 @@ class Memes:
     async def angery(self):
         """ANGERY!!!!"""
         await self.bot.say("https://cdn.discordapp.com/attachments/175379883172691968/293511301752160256/71b.png")
+
+    @commands.command()
+    async def gitpull(self):
+        """Pulls github changes"""
+        bashCommand = "git pull"
+        process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+        output, error = process.communicate()
 
     @commands.command()
     async def dank(self):
