@@ -30,8 +30,6 @@ class champgg2:
 
         }
 
-        if
-
         if role in shorthand.keys():
             role = shorthand[role]
 
