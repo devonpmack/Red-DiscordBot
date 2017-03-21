@@ -43,10 +43,13 @@ class Memes:
         """Get a random post from your choice of subreddit"""
         r = praw.Reddit(client_id='r_c8xhZFOC1kyQ', client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ', password='devonbot',
                         user_agent='discordbot', username='devon_bot')
-        sub = r.subreddit(subreddit)
-        posts = sub.random()
-        await self.bot.say(posts.title)
-        await self.bot.say(posts.url)
+        try:
+            sub = r.subreddit(subreddit)
+            posts = sub.random()
+            await self.bot.say(posts.title)
+            await self.bot.say(posts.url)
+        except:
+            await self.bot.say("Invalid subreddit \"" + subreddit + "\".")
 
     @commands.command()
     async def diwhy(self):
