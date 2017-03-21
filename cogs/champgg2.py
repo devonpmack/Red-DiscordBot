@@ -25,7 +25,7 @@ class champgg2:
                 roleNum = i
                 break
 
-        for i in range(0, 5):
+        for i in range(0, 6):
              items.append(str(data[roleNum]['items']['highestWinPercent']['items'][i]['name']))
 
         for i in items:
