@@ -32,4 +32,4 @@ class champgg2:
         await self.bot.say(say)
 
 def setup(bot):
-    bot.add_cog(lolwiki(bot))
+    bot.add_cog(champgg2(bot))
