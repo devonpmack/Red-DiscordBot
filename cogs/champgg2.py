@@ -23,10 +23,8 @@ class champgg2:
                 roleNum = i
                 break
 
-        await self.bot.say(roleNum)
-
         for i in range(0, 5):
-            items[i] = str(data[roleNum]['items'][i]['name'])
+            items[i] = str(data[roleNum]['items']['highestWinPercent'][i]['name'])
 
         for i in items:
             say = i + " > "
