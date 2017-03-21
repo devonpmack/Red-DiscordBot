@@ -4,11 +4,6 @@ import requests
 import re
 from discord.ext import commands
 import aiohttp
-try: # check if BeautifulSoup4 is installed
-	from bs4 import BeautifulSoup
-	soupAvailable = True
-except:
-	soupAvailable = False
 
 class Champgg:
     """My custom cog that does stuff!"""
