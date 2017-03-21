@@ -26,6 +26,7 @@ class Memes:
         print("pulling git")
         process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
         output, error = process.communicate()
+        await self.bot.say(output)
 
 
     @commands.command()
