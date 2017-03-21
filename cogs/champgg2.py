@@ -46,7 +46,7 @@ class champgg2:
         if roleNum < 0:
             await self.bot.say("Couldn't find that champion/role combination.")
 
-        await self.bot.say("Build winrate: " + str(data[roleNum]['items']['highestWinPercent']['winPercent']) + "\% \over " + str(data[roleNum]['items']['highestWinPercent']['winPercent']))
+        await self.bot.say("Build winrate: " + str(data[roleNum]['items']['highestWinPercent']['winPercent']) + "\% over " + str(data[roleNum]['items']['highestWinPercent']['games']) + "games:")
 
         for i in range(0, 6):
              items.append(str(data[roleNum]['items']['highestWinPercent']['items'][i]['name']))
