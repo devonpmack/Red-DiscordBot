@@ -15,7 +15,7 @@ class champgg2:
         """Channel your inner Devon and get the highest winrate build"""
         url = "http://api.champion.gg/champion/" + champ + "/?api_key=" + self.apikey
 
-        request = requsts.get(url)
+        request = requests.get(url)
         data = request.json()
 
         for i in range(0, len(data)):
