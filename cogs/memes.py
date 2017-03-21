@@ -39,6 +39,16 @@ class Memes:
         await self.bot.say(posts.url)
 
     @commands.command()
+    async def reddit(self,subreddit):
+        """Get a random post from your choice of subreddit"""
+        r = praw.Reddit(client_id='r_c8xhZFOC1kyQ', client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ', password='devonbot',
+                        user_agent='discordbot', username='devon_bot')
+        sub = r.subreddit(subreddit)
+        posts = sub.random()
+        await self.bot.say(posts.title)
+        await self.bot.say(posts.url)
+
+    @commands.command()
     async def diwhy(self):
         """Get a random r/diWHY post"""
         r = praw.Reddit(client_id='r_c8xhZFOC1kyQ',client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ',password='devonbot',user_agent='discordbot',username='devon_bot')
@@ -49,7 +59,7 @@ class Memes:
 
     @commands.command()
     async def wholesome(self):
-        """Get a random r/diWHY post"""
+        """Get a random r/wholesomememes post"""
         r = praw.Reddit(client_id='r_c8xhZFOC1kyQ',client_secret='-tdUgft_NRso9idHBmWkSRCfBfQ',password='devonbot',user_agent='discordbot',username='devon_bot')
         sub = r.subreddit('wholesomememes')
         posts = sub.random()
