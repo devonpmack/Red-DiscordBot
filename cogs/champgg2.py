@@ -28,10 +28,10 @@ class champgg2:
         for i in range(0, 6):
              items.append(str(data[roleNum]['items']['highestWinPercent']['items'][i]['name']))
 
-        for i in items:
-            say += i + " > "
+        for i in range(0, 5):
+            say += items[i] + " > "
 
-        await self.bot.say(say)
+        await self.bot.say(say + items[5])
 
 def setup(bot):
     bot.add_cog(champgg2(bot))
