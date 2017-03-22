@@ -45,7 +45,7 @@ class champgg2:
                 playrate = str(data['data']['general']['playPercent'])
                 banrate = str(data['data']['general']['banRate'])
 
-                await self.bot.say(str(i + 1) + ". " + champ + " - Winrate: " + winrate "%, Playrate: " + playrate + "%, Banrate " + banrate + "%.")
+                await self.bot.say(str(i + 1) + ". " + champ + " - Winrate: " + winrate + "%, Playrate: " + playrate + "%, Banrate " + banrate + "%.")
 
         except:
             self.bot.say("Couldn't find data for that role")
