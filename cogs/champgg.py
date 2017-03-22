@@ -9,7 +9,6 @@ class Champgg:
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
-        self.bot = bot
         self.valid = "^[0123456789p{L} _.]+$abcdefghijklmnopqrstuvwxyz"
         self.apikey = "b096f8311a7c35406547e0b38363f0ee"
         self.rapikey = "RGAPI-e807e69e-4f64-455c-9654-49caca7e2b08"
@@ -123,4 +122,4 @@ class Champgg:
     def special_match(strg, search=re.compile(r'[^\. a-z0-9A-Z]').search):
         return not bool(search(strg))
 def setup(bot):
-    print("Champgg init")
+    bot.add_cog(Champgg(bot))
