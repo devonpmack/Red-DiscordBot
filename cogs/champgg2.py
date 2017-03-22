@@ -11,7 +11,7 @@ class champgg2:
         self.apikey = "b096f8311a7c35406547e0b38363f0ee"
 
     @commands.command()
-    async def top(self, role)
+    async def top(self, role):
 
         """Top 5 highest winrate champions for a role"""
 
