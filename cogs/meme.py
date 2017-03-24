@@ -26,7 +26,7 @@ class meme:
             await self.bot.say("You must be in a voice channel.")
             return
 
-        voice = yield from self.bot.join_voice_channel(channel)
+        voice = self.bot.join_voice_channel(channel)
         player = voice.create_ffmpeg_player('kled_quotes/Kled1.mp3')
 
 def setup(bot):
