@@ -20,11 +20,11 @@ class meme:
         author = ctx.message.author
         channel = author.voice_channel
 
-        try:
-            self.has_connect_perm(author, server)
-        except AuthorNotConnected:
-            await self.bot.say("You must be in a voice channel.")
-            return
+        #try:
+        self.has_connect_perm(author, server)
+        #except AuthorNotConnected:
+            #await self.bot.say("You must be in a voice channel.")
+            #return
 
         voice = self.bot.join_voice_channel(channel)
         player = voice.create_ffmpeg_player('kled_quotes/Kled1.mp3')
