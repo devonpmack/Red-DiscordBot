@@ -20,7 +20,7 @@ class Hockeylover:
         now = datetime.datetime.now()
 
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
-        diff = eleven-now - datetime.timedelta(hours=4)
+        diff = eleven-now + datetime.timedelta(hours=4)
 
         await self.bot.say("The current time is %s UJT(Until Justin's Bedtime)" % ':'.join(str(diff).split(':')[:2]))
 
