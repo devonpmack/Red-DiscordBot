@@ -18,9 +18,7 @@ class Hockeylover:
         """Tells you the time (in PJT)"""
         import datetime
         now = datetime.datetime.now()
-        bedtime = datetime.datetime.now()
-        bedtime = bedtime.replace(hour=11)
-        diff = now-bedtime - datetime.timedelta(hours=5)
+        diff = now-datetime.timedelta(hours=11) - datetime.timedelta(hours=5)
         if diff.total_seconds() > 0:
             await self.bot.say("The current time is %s UJT(Until Justin's Bedtime)" % ':'.join(str(diff).split(':')[:2]))
         else:
