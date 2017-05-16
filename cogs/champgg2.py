@@ -40,10 +40,10 @@ class champgg2:
             await self.bot.say("Top 5 Champions for " + role.upper())
 
             for i in range(0, 5):
-                champ = str(data[i]['data']['name'])
-                winrate = str(data[i]['data']['general']['winPercent'])
-                playrate = str(data[i]['data']['general']['playPercent'])
-                banrate = str(data[i]['data']['general']['banRate'])
+                champ = str(data['data'][i]['name'])
+                winrate = str(data['data'][i]['general']['winPercent'])
+                playrate = str(data['data'][i]['general']['playPercent'])
+                banrate = str(data['data'][i]['general']['banRate'])
 
                 await self.bot.say(str(i + 1) + ". " + champ + " - Winrate: " + winrate + "%, Playrate: " + playrate + "%, Banrate " + banrate + "%.")
 
