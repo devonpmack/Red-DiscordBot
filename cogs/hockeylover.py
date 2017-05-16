@@ -22,7 +22,12 @@ class Hockeylover:
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
         diff = eleven-now + datetime.timedelta(hours=4)
 
-        await self.bot.say("The current time is %s UJT(Until Justin's Bedtime)" % ':'.join(str(diff).split(':')[:2]))
+        if diff.total_seconds() > 0:
+            await self.bot.say("The current time is %s UJT(Until Justin's Bedtime)" % ':'.join(str(diff).split(':')[:2]))
+        else:
+            h = int(diff.total_seconds() / 3600)
+            m = int(diff.total_seconds() % 3600 / 60)
+            await self.bot.say("IT IS %d HOURS %d MINUTES PAST JUSTIN'S BEDTIME!!!!!" % (h, m))
 
         if diff.total_seconds() <= 0:
             await self.bot.say(":rotating_light::rotating_light::rotating_light: WEE WOO WEE WOO WEE WOO"
