@@ -24,7 +24,7 @@ class Hockeylover:
         h = int(diff.total_seconds() / 3600)
         m = int(diff.total_seconds() % 3600 / 60)
         if diff.total_seconds() > 0:
-            await self.bot.say("The current time is %d:%d UJT(Until Justin's Bedtime)" % (h, m))
+            await self.bot.say("The current time is %02d:%02d UJT(Until Justin's Bedtime)" % (h, m))
         else:
             await self.bot.say("IT IS %d HOURS %d MINUTES PAST JUSTIN'S BEDTIME!!!!!" % (-h, -m))
 
