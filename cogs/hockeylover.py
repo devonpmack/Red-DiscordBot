@@ -17,16 +17,16 @@ class Hockeylover:
     async def time(self):
         """Tells you the time (in PJT)"""
         import datetime
-        now = datetime.datetime.now() - datetime.timedelta(hours=4)
+        now = datetime.datetime.now() + datetime.timedelta(hours=7)#- datetime.timedelta(hours=4)
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
 
         diff = eleven-now
         h = int(diff.total_seconds() / 3600)
         m = int(diff.total_seconds() % 3600 / 60)
         if diff.total_seconds() > 0:
-            await self.bot.say("The current time is %02d:%02d UJT(Until Justin's Bedtime)" % (h, m))
+            await self.bot.say("The current time is %d:%02d UJT(Until Justin's Bedtime)" % (h, m))
         else:
-            await self.bot.say("IT IS %d HOURS %d MINUTES PAST JUSTIN'S BEDTIME!!!!!" % (-h, -m))
+            await self.bot.say("IT IS %d HOURS %d MINUTES PAST JUSTIN'S BEDTIME!!!!!" % (h, m))
 
         if diff.total_seconds() <= 0:
             await self.bot.say(":rotating_light::rotating_light::rotating_light: WEE WOO WEE WOO WEE WOO"
