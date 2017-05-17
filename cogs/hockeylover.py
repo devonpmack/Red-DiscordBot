@@ -29,14 +29,15 @@ class Hockeylover:
             await self.bot.say("IT IS %d HOURS %d MINUTES PAST JUSTIN'S BEDTIME!!!!!" % (h, m))
 
         if diff.total_seconds() <= 0:
-            await self.bot.say(":rotating_light::rotating_light::rotating_light: WEE WOO WEE WOO WEE WOO"
-                               " :rotating_light::rotating_light::rotating_light: YOU ARE BEING DETAINED"
-                               " :cop::skin-tone-1::cop::skin-tone-1::cop::skin-tone-1: FOR BEING AWAKE"
-                               "  PAST JUSTINS BEDTIME :clock1::ok_hand::skin-tone-1::smirk: PLEASE SHOW"
-                               " ME YOUR PERMISSION SLIP FROM JUSTINS MOM :pray::skin-tone-1::pencil:"
-                               " :speak_no_evil::raised_hands::skin-tone-2::fire::fire: 11 PM ONLY!!"
-                               " IT DONT MATTER IF YOU UP DOING HOMEWORK OR WHAT :sweat_drops::"
-                               "sweat_drops::weary::weary::100::100::100:")
+            for i in range(0,6):
+                await self.bot.say(":rotating_light::rotating_light::rotating_light: WEE WOO WEE WOO WEE WOO"
+                                   " :rotating_light::rotating_light::rotating_light: YOU ARE BEING DETAINED"
+                                   " :cop::skin-tone-1::cop::skin-tone-1::cop::skin-tone-1: FOR BEING AWAKE"
+                                   "  PAST JUSTINS BEDTIME :clock1::ok_hand::skin-tone-1::smirk: PLEASE SHOW"
+                                   " ME YOUR PERMISSION SLIP FROM JUSTINS MOM :pray::skin-tone-1::pencil:"
+                                   " :speak_no_evil::raised_hands::skin-tone-2::fire::fire: 11 PM ONLY!!"
+                                   " IT DONT MATTER IF YOU UP DOING HOMEWORK OR WHAT :sweat_drops::"
+                                   "sweat_drops::weary::weary::100::100::100:")
 
     @commands.group(pass_context=True, no_pm=True)
     async def thathockeylover(self, ctx):
