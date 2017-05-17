@@ -18,7 +18,7 @@ class Hockeylover:
         """Tells you the time (in PJT)"""
         import datetime
         now = datetime.datetime.now()
-
+        await self.bot.say(now)
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
 
         diff = eleven-now
