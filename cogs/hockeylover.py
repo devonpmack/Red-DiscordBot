@@ -17,7 +17,7 @@ class Hockeylover:
     async def time(self):
         """Tells you the time (in PJT)"""
         import datetime
-        now = datetime.datetime.now() - datetime.timedelta(hours=4)
+        now = datetime.datetime.now() - datetime.timedelta(hours=4) + datetime.timedelta(minutes=1)
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
 
         diff = eleven-now
