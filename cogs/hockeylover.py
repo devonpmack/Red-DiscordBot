@@ -20,6 +20,8 @@ class Hockeylover:
         now = datetime.datetime.now()
 
         eleven = now.replace(hour=23, minute=0, second=0, microsecond=0)
+        await self.bot.say(eleven)
+        await self.bot.say(now)
         diff = eleven-now + datetime.timedelta(hours=4)
         h = int(diff.total_seconds() / 3600)
         m = int(diff.total_seconds() % 3600 / 60)
