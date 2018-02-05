@@ -32,7 +32,11 @@ class Memes:
     async def greetings(self, ctx):
         """Pulls github changes"""
         await self.bot.say("GREETINGS!!!!!!!!!!!!!!!!!!!!!!!!!")
-        await self.bot.kick(ctx.message.author)
+        try:
+            await self.bot.kick(ctx.message.author)
+            await self.bot.say(ctx.message.author.mention + " has been greeted. Let this be a warning to you all.")
+        except discord.errors.Forbidden:
+            await self.bot.say("(this person is too powerful)")
 
     @commands.command()
     async def dank(self):
