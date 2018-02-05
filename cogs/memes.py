@@ -30,7 +30,7 @@ class Memes:
 
     @commands.command(pass_context=True)
     async def greetings(self, ctx):
-        """Pulls github changes"""
+        """A warm greetings :)"""
         await self.bot.say("GREETINGS!!!!!!!!!!!!!!!!!!!!!!!!!")
         try:
             await self.bot.kick(ctx.message.author)
