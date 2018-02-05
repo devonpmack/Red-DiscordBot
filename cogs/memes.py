@@ -28,6 +28,11 @@ class Memes:
         output, error = process.communicate()
         await self.bot.say(output.decode('utf-8'))
 
+    @commands.command(pass_context=True)
+    async def greetings(self, ctx):
+        """Pulls github changes"""
+        await self.bot.say("GREETINGS!!!!!!!!!!!!!!!!!!!!!!!!!")
+        await self.bot.kick(ctx.message.author)
 
     @commands.command()
     async def dank(self):
